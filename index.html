@@ -1,0 +1,1707 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Omega Union | Garantili E-Ticaret Başarısı</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+        content="Omega Union ile 3 ayda e-ticarette satış odaklı Shopify mağazası kur, reklam ve içerik stratejini doğru şekilde inşa et.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #020617;
+      --bg-section: #020818;
+      --bg-card: #020617;
+      --text-main: #f9fafb;
+      --text-muted: #9ca3af;
+      --accent: #2563eb;
+      --accent-soft: rgba(37, 99, 235, 0.1);
+      --border-subtle: #111827;
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.85);
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      scroll-behavior: smooth;
+      background: radial-gradient(circle at top, #020617 0, #020617 40%, #000 100%);
+      color: var(--text-main);
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* Layout */
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    section {
+      padding: 5rem 0;
+    }
+
+    @media (min-width: 1024px) {
+      section {
+        padding: 6rem 0;
+      }
+    }
+
+    /* Navbar */
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(to bottom, rgba(2, 6, 23, 0.96), rgba(2, 6, 23, 0.75));
+      border-bottom: 1px solid rgba(15, 23, 42, 0.9);
+    }
+
+    .navbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      padding: 0.9rem 1.5rem;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .brand-logo {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 10%, #ffffff 0, #e5e7eb 35%, #020617 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 12px 35px rgba(15, 23, 42, 0.95);
+      overflow: hidden;
+    }
+
+    .brand-logo img {
+      width: 120%;
+      height: auto;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .brand-text span:first-child {
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+    }
+
+    .brand-text span:last-child {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    .nav-links {
+      display: none;
+      align-items: center;
+      gap: 1.3rem;
+      font-size: 0.85rem;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      font-weight: 500;
+      position: relative;
+      padding-bottom: 0.1rem;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.25rem;
+      width: 0;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(to right, #22c55e, #2563eb);
+      transition: width 0.22s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-main);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      display: none;
+    }
+
+    .btn {
+      border-radius: 999px;
+      padding: 0.75rem 1.4rem;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.87rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #2563eb, #22c55e);
+      color: #0b1120;
+      box-shadow: 0 12px 35px rgba(37, 99, 235, 0.55);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 40px rgba(37, 99, 235, 0.65);
+    }
+
+    .btn-outline {
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--text-main);
+      border: 1px solid rgba(51, 65, 85, 0.9);
+    }
+
+    .btn-outline:hover {
+      background: rgba(15, 23, 42, 1);
+      border-color: rgba(148, 163, 184, 1);
+    }
+
+    .btn-icon {
+      font-size: 1.1rem;
+    }
+
+    .mobile-menu-toggle {
+      display: inline-flex;
+      width: 36px;
+      height: 36px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      border: 1px solid rgba(51, 65, 85, 0.9);
+      background: rgba(2, 6, 23, 0.9);
+      cursor: pointer;
+    }
+
+    .mobile-menu-toggle span {
+      width: 18px;
+      height: 2px;
+      border-radius: 999px;
+      background: #e5e7eb;
+      position: relative;
+      display: block;
+    }
+
+    .mobile-menu-toggle span::before,
+    .mobile-menu-toggle span::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 18px;
+      height: 2px;
+      border-radius: 999px;
+      background: #e5e7eb;
+    }
+
+    .mobile-menu-toggle span::before {
+      top: -5px;
+    }
+
+    .mobile-menu-toggle span::after {
+      top: 5px;
+    }
+
+    .mobile-nav {
+      display: none;
+      background: rgba(2, 6, 23, 0.98);
+      border-top: 1px solid rgba(15, 23, 42, 0.9);
+    }
+
+    .mobile-nav-inner {
+      padding: 0.75rem 1.5rem 1.1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      font-size: 0.9rem;
+    }
+
+    .mobile-nav-inner a {
+      color: var(--text-muted);
+      padding: 0.25rem 0;
+    }
+
+    .mobile-nav-inner a:hover {
+      color: var(--text-main);
+    }
+
+    .mobile-nav-inner .btn-primary {
+      width: 100%;
+      justify-content: center;
+      margin-top: 0.5rem;
+    }
+
+    @media (min-width: 900px) {
+      .nav-links {
+        display: flex;
+      }
+
+      .nav-cta {
+        display: block;
+      }
+
+      .mobile-menu-toggle,
+      .mobile-nav {
+        display: none !important;
+      }
+
+      .navbar-inner {
+        padding-inline: 0;
+      }
+    }
+
+    /* Hero */
+
+    #hero {
+      padding-top: 3.5rem;
+      padding-bottom: 5rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(0, 1.1fr);
+      gap: 3.2rem;
+      align-items: center;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 2.75rem;
+      }
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.28rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(37, 99, 235, 0.7);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #dbeafe;
+      margin-bottom: 1rem;
+    }
+
+    .hero-eyebrow-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 6px rgba(34, 197, 94, 0.25);
+    }
+
+    .hero-title {
+      font-size: clamp(2.35rem, 3.1vw + 1.2rem, 3.4rem);
+      line-height: 1.05;
+      letter-spacing: -0.045em;
+      margin-bottom: 0.85rem;
+    }
+
+    .hero-title span.accent {
+      background: linear-gradient(to right, #60a5fa, #22c55e);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 36rem;
+      line-height: 1.6;
+      margin-bottom: 1.35rem;
+    }
+
+    .hero-note {
+      font-size: 0.85rem;
+      color: #a5b4fc;
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .hero-note-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #f97316;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      align-items: center;
+      margin-bottom: 1.7rem;
+    }
+
+    .hero-secondary-text {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .hero-kpis {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.4rem;
+      margin-top: 1.2rem;
+    }
+
+    .hero-kpi {
+      min-width: 130px;
+      padding: 0.7rem 0.95rem;
+      border-radius: 0.9rem;
+      background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.2), rgba(15, 23, 42, 0.98));
+      border: 1px solid rgba(30, 64, 175, 0.8);
+      box-shadow: 0 14px 32px rgba(15, 23, 42, 0.9);
+    }
+
+    .hero-kpi label {
+      display: block;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 0.3rem;
+    }
+
+    .hero-kpi strong {
+      font-size: 1.28rem;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-kpi span {
+      font-size: 0.76rem;
+      color: #4ade80;
+    }
+
+    .hero-right {
+      position: relative;
+    }
+
+    .hero-panel {
+      border-radius: var(--radius-lg);
+      background: radial-gradient(circle at top, rgba(37, 99, 235, 0.4), rgba(2, 6, 23, 0.98));
+      padding: 1.4rem 1.4rem 1.7rem;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(37, 99, 235, 0.5);
+      overflow: hidden;
+    }
+
+    .hero-panel-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+
+    .hero-panel-title {
+      font-size: 0.85rem;
+      color: #e5e7eb;
+      font-weight: 500;
+    }
+
+    .hero-panel-pill {
+      font-size: 0.7rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.8);
+      color: #a5b4fc;
+    }
+
+    .hero-scatter {
+      margin-top: 0.75rem;
+      border-radius: 1.1rem;
+      background: #020617;
+      padding: 0.7rem;
+      border: 1px solid rgba(51, 65, 85, 0.9);
+    }
+
+    .hero-scatter img {
+      border-radius: 0.75rem;
+    }
+
+    .hero-panel-footer {
+      margin-top: 0.85rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .hero-panel-footer span strong {
+      color: #4ade80;
+    }
+
+    .hero-floating-badge {
+      position: absolute;
+      right: -8px;
+      bottom: -18px;
+      width: 160px;
+      padding: 0.8rem 0.9rem;
+      border-radius: 1.2rem;
+      background: rgba(2, 6, 23, 0.98);
+      border: 1px solid rgba(148, 163, 184, 0.8);
+      box-shadow: 0 18px 50px rgba(15, 23, 42, 1);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .hero-floating-badge strong {
+      display: block;
+      font-size: 0.8rem;
+      color: #e5e7eb;
+      margin-bottom: 0.1rem;
+    }
+
+    @media (max-width: 900px) {
+      #hero {
+        padding-top: 2.5rem;
+      }
+
+      .hero-floating-badge {
+        position: static;
+        width: 100%;
+        margin-top: 1rem;
+      }
+    }
+
+    /* Section headings */
+
+    .section-heading {
+      max-width: 640px;
+      margin-bottom: 2.3rem;
+    }
+
+    .section-eyebrow {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #60a5fa;
+      margin-bottom: 0.3rem;
+    }
+
+    .section-title {
+      font-size: 1.65rem;
+      letter-spacing: -0.04em;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-description {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* 90 days / timeline */
+
+    #timeline {
+      background: radial-gradient(circle at top, #020617 0, #020617 45%, #000 100%);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .timeline-top {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 2.4rem;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+
+    @media (max-width: 900px) {
+      .timeline-top {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .timeline-highlight {
+      border-radius: var(--radius-lg);
+      background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.25), rgba(2, 6, 23, 1));
+      padding: 1.5rem 1.6rem;
+      border: 1px solid rgba(37, 99, 235, 0.55);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .timeline-highlight h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.4rem;
+      letter-spacing: -0.03em;
+    }
+
+    .timeline-highlight p {
+      font-size: 0.94rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 0.9rem;
+    }
+
+    .timeline-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+    }
+
+    .timeline-tags span {
+      padding: 0.28rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(51, 65, 85, 0.95);
+      color: #e5e7eb;
+    }
+
+    .timeline-steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.25rem;
+    }
+
+    @media (max-width: 900px) {
+      .timeline-steps {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .timeline-step {
+      border-radius: var(--radius-md);
+      background: rgba(2, 6, 23, 0.98);
+      border: 1px solid var(--border-subtle);
+      padding: 1.1rem 1.2rem 1.2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .timeline-step::before {
+      content: attr(data-month);
+      position: absolute;
+      top: 0.8rem;
+      right: 1rem;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: rgba(148, 163, 184, 0.8);
+    }
+
+    .timeline-number {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: radial-gradient(circle at top, #22c55e, #2563eb);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 0.7rem;
+      box-shadow: 0 12px 30px rgba(37, 99, 235, 0.7);
+    }
+
+    .timeline-step h3 {
+      font-size: 0.98rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .timeline-step p {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Program features */
+
+    #program {
+      background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.18), #020617 55%, #000 100%);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .program-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.15rem;
+    }
+
+    @media (max-width: 1024px) {
+      .program-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 700px) {
+      .program-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .program-item {
+      border-radius: var(--radius-md);
+      background: rgba(2, 6, 23, 0.98);
+      border: 1px solid rgba(30, 64, 175, 0.55);
+      padding: 1rem 1rem 1.1rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .program-item::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.25), transparent 60%);
+      opacity: 0;
+      transition: opacity 0.18s ease;
+      pointer-events: none;
+    }
+
+    .program-item:hover::after {
+      opacity: 1;
+    }
+
+    .program-index {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: rgba(148, 163, 184, 0.9);
+      margin-bottom: 0.35rem;
+    }
+
+    .program-item h3 {
+      font-size: 0.96rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .program-item h4 {
+      font-size: 0.82rem;
+      color: #a5b4fc;
+      margin-bottom: 0.55rem;
+    }
+
+    .program-item p {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Who it's for */
+
+    #who {
+      background: #020617;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .who-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 2.4rem;
+      align-items: center;
+    }
+
+    @media (max-width: 900px) {
+      .who-layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .who-image-card {
+      border-radius: var(--radius-lg);
+      background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.25), #020617 55%);
+      padding: 1.4rem 1.4rem 1.6rem;
+      border: 1px solid rgba(37, 99, 235, 0.6);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .who-image-card img {
+      border-radius: 1rem;
+      margin-top: 0.9rem;
+    }
+
+    .who-tags {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 0.6rem;
+    }
+
+    .who-columns {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.15rem;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 900px) {
+      .who-columns {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .who-card {
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-subtle);
+      background: radial-gradient(circle at top left, rgba(30, 64, 175, 0.6), #020617 60%);
+      padding: 1rem 1rem 1.1rem;
+    }
+
+    .who-card h3 {
+      font-size: 0.96rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .who-card ul {
+      list-style: none;
+      font-size: 0.84rem;
+      color: var(--text-muted);
+    }
+
+    .who-card li {
+      display: flex;
+      gap: 0.45rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .who-card li span {
+      font-size: 1rem;
+      line-height: 1.2;
+    }
+
+    /* Case study / video */
+
+    #case-study {
+      background: radial-gradient(circle at 10% -20%, rgba(37, 99, 235, 0.4), #020617 55%, #000 100%);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .case-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 2.4rem;
+      align-items: center;
+    }
+
+    @media (max-width: 900px) {
+      .case-layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .case-video {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: #000;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(37, 99, 235, 0.7);
+    }
+
+    .case-video iframe {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 0;
+      display: block;
+    }
+
+    .case-note {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 0.7rem;
+    }
+
+    .case-metrics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 1.4rem;
+    }
+
+    @media (max-width: 600px) {
+      .case-metrics {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .case-metric {
+      border-radius: 0.9rem;
+      background: rgba(2, 6, 23, 0.98);
+      border: 1px solid var(--border-subtle);
+      padding: 0.85rem 0.9rem;
+      font-size: 0.82rem;
+    }
+
+    .case-metric strong {
+      display: block;
+      font-size: 0.95rem;
+      margin-bottom: 0.25rem;
+    }
+
+    /* FAQ */
+
+    #faq {
+      background: #020617;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
+      gap: 2.4rem;
+      align-items: flex-start;
+    }
+
+    @media (max-width: 900px) {
+      .faq-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    details {
+      border-radius: var(--radius-md);
+      background: rgba(2, 6, 23, 0.98);
+      border: 1px solid var(--border-subtle);
+      padding: 0.8rem 1rem;
+      font-size: 0.88rem;
+    }
+
+    details + details {
+      margin-top: 0.75rem;
+    }
+
+    summary {
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      font-weight: 500;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-icon {
+      font-size: 1.2rem;
+      color: var(--accent);
+    }
+
+    details[open] {
+      border-color: rgba(37, 99, 235, 0.7);
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 1);
+    }
+
+    details[open] .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    details p {
+      margin-top: 0.7rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .faq-note {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 1rem;
+    }
+
+    /* Newsletter / CTA */
+
+    #newsletter {
+      background: radial-gradient(circle at top, rgba(37, 99, 235, 0.4), #020617 60%, #000 100%);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .newsletter-card {
+      border-radius: var(--radius-lg);
+      background: rgba(2, 6, 23, 0.98);
+      border: 1px solid rgba(37, 99, 235, 0.6);
+      padding: 1.8rem 1.6rem 1.9rem;
+      box-shadow: var(--shadow-soft);
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 2.2rem;
+      align-items: center;
+    }
+
+    @media (max-width: 900px) {
+      .newsletter-card {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .newsletter-card h2 {
+      font-size: 1.35rem;
+      letter-spacing: -0.04em;
+      margin-bottom: 0.4rem;
+    }
+
+    .newsletter-card p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      max-width: 26rem;
+    }
+
+    .newsletter-form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      font-size: 0.86rem;
+    }
+
+    .newsletter-input-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .newsletter-input-row input {
+      flex: 1;
+      min-width: 0;
+      border-radius: 999px;
+      border: 1px solid #1f2937;
+      background: rgba(15, 23, 42, 0.95);
+      padding: 0.75rem 0.95rem;
+      color: var(--text-main);
+      font-size: 0.86rem;
+    }
+
+    .newsletter-input-row input::placeholder {
+      color: #6b7280;
+    }
+
+    .newsletter-hint {
+      font-size: 0.78rem;
+      color: #6b7280;
+    }
+
+    /* Footer */
+
+    footer {
+      padding: 1.6rem 0 2rem;
+      background: #020617;
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.82rem;
+      color: #6b7280;
+    }
+
+    .footer-inner strong {
+      color: #e5e7eb;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 0.9rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      text-underline-offset: 3px;
+    }
+
+    @media (max-width: 700px) {
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="navbar-inner">
+      <a href="#hero" class="brand">
+        <div class="brand-logo">
+          <img src="https://omegaunion.co/cdn/shop/files/2.png?v=1753916211&width=760" alt="Omega Union Logo">
+        </div>
+        <div class="brand-text">
+          <span>OMEGA UNION</span>
+          <span>E-ticaret danışmanlığı</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#timeline">90 Günlük Yol</a>
+        <a href="#program">Program</a>
+        <a href="#who">Kimin için?</a>
+        <a href="#case-study">Case Study</a>
+        <a href="#faq">SSS</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="#newsletter" class="btn btn-primary">
+          <span>Şimdi Randevu Al</span>
+          <span class="btn-icon">↗</span>
+        </a>
+      </div>
+
+      <button class="mobile-menu-toggle" aria-label="Menüyü aç/kapat">
+        <span></span>
+      </button>
+    </div>
+    <div class="mobile-nav">
+      <div class="mobile-nav-inner">
+        <a href="#timeline">90 Günlük Yol</a>
+        <a href="#program">Program</a>
+        <a href="#who">Kimin için?</a>
+        <a href="#case-study">Case Study</a>
+        <a href="#faq">Sık Sorulan Sorular</a>
+        <a href="#newsletter" class="btn btn-primary">Şimdi Randevu Al</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div class="hero-eyebrow">
+              <span class="hero-eyebrow-dot"></span>
+              <span>3 ayda satış odaklı e-ticaret</span>
+            </div>
+
+            <h1 class="hero-title">
+              <span class="accent">3 Ayda</span> E-Ticarette
+              Başarı Garantisi
+            </h1>
+
+            <p class="hero-subtitle">
+              Shopify mağazanı sıfırdan kuruyor, içerik ve reklam stratejini
+              birlikte tasarlıyor ve seni en az 6–7 haneli ciroya gidecek
+              yola sokuyoruz. Teknik detaylara boğulmadan, net bir planla.
+            </p>
+
+            <div class="hero-note">
+              <span class="hero-note-dot"></span>
+              <span>Kontenjan sınırlıdır – her dönem yalnızca seçili markalarla çalışıyoruz.</span>
+            </div>
+
+            <div class="hero-actions">
+              <a href="#newsletter" class="btn btn-primary">
+                <span>Şimdi Randevu Al</span>
+                <span class="btn-icon">➜</span>
+              </a>
+              <a href="#case-study" class="btn btn-outline">
+                <span>Case study’yi izle</span>
+              </a>
+            </div>
+
+            <p class="hero-secondary-text">
+              Sermayeni boşa harcamadan, doğru ekiple ve gerçek veriye dayalı bir
+              sistemle ilerlemek istiyorsan başvurunu bırak.
+            </p>
+
+            <div class="hero-kpis">
+              <div class="hero-kpi">
+                <label>Toplam satış</label>
+                <strong>₺5.312.280+</strong>
+                <span>Danışan markalardan raporlanan ciro</span>
+              </div>
+              <div class="hero-kpi">
+                <label>Program süresi</label>
+                <strong>90 gün</strong>
+                <span>Kurulum + test + ölçekleme süreci</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-right">
+            <div class="hero-panel">
+              <div class="hero-panel-header">
+                <div>
+                  <div class="hero-panel-title">90 Günde Araba Aldıran Satışlar</div>
+                  <p style="font-size:0.8rem;color:#cbd5f5;margin-top:0.15rem;">
+                    Gerçek Shopify ekran görüntüleri, gerçek sonuçlar.
+                  </p>
+                </div>
+                <span class="hero-panel-pill">Shopify &amp; Ads Panel</span>
+              </div>
+
+              <div class="hero-scatter">
+                <img
+                  src="https://omegaunion.co/cdn/shop/files/2_001c1e3b-506c-4b22-b7a0-d1b364a82380.png?v=1755086688&width=1500"
+                  alt="Omega Union satış sonuçları görseli">
+              </div>
+
+              <div class="hero-panel-footer">
+                <span>Danışanlarımızın bir kısmı yalnızca <strong>90 günde</strong> ilk hedef araçlarını aldı.</span>
+                <span>Hedef: 6–7 haneli gelir.</span>
+              </div>
+            </div>
+
+            <div class="hero-floating-badge">
+              <strong>“Tek başına yapamazdım.”</strong>
+              <span>Markalara sadece eğitim değil, kurulumdan ölçeklemeye kadar
+                ortak gibi eşlik eden bir ekip yapısıyla çalışıyoruz.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 90 DAYS / TIMELINE -->
+    <section id="timeline">
+      <div class="container">
+        <div class="timeline-top">
+          <div class="section-heading">
+            <div class="section-eyebrow">90 GÜNDE BAŞARI PLANI</div>
+            <h2 class="section-title">Hazırlık, Test, Ölçekleme</h2>
+            <p class="section-description">
+              Program; 1. ayda temel kurulum ve strateji, 2. ayda test &amp; trafik,
+              3. ayda ise ölçekleme ve sistem kurulumuna odaklanır. Böylece hem
+              satış alır hem de sürdürülebilir bir yapı kurarsın.
+            </p>
+          </div>
+
+          <div class="timeline-highlight">
+            <h3>90 Günde Araba Aldıracak Satışlar</h3>
+            <p>
+              Sıfırdan yola çıkan girişimcilerimiz kendi Shopify mağazalarında
+              hedefledikleri satışlara ulaştı. Rakamlar kozmetik değil; panelden
+              alınmış gerçek veriler.
+            </p>
+            <div class="timeline-tags">
+              <span>Shopify kurulumu</span>
+              <span>Reklam &amp; içerik</span>
+              <span>Yapılandırılmış funnel</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-steps">
+          <div class="timeline-step" data-month="1. AY">
+            <div class="timeline-number">1</div>
+            <h3>Hazırlık ve Kurulum</h3>
+            <p>
+              Hedef kitleni analiz ediyor, marka kimliğini netleştiriyor,
+              Shopify mağazanı, ödeme altyapını ve ilk ürün sayfalarını
+              satışa hazır hale getiriyoruz.
+            </p>
+          </div>
+          <div class="timeline-step" data-month="2. AY">
+            <div class="timeline-number">2</div>
+            <h3>Test ve Trafik</h3>
+            <p>
+              Meta, TikTok ve Google reklamlarıyla mağazana nitelikli trafik
+              çekmeye başlıyoruz. Ürün ve kreatifleri teste sokup veriye göre
+              optimizasyon yapıyoruz.
+            </p>
+          </div>
+          <div class="timeline-step" data-month="3. AY">
+            <div class="timeline-number">3</div>
+            <h3>Ölçekleme ve Sistem</h3>
+            <p>
+              Çalışan kampanyaları büyütüyor, lojistik ve operasyonu sistemleştiriyor,
+              işi kalıcı hale getiriyoruz. Hedef net: 6–7 haneli gelir bandı.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROGRAM -->
+    <section id="program">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-eyebrow">PROGRAMDA SENİ NELER BEKLİYOR?</div>
+          <h2 class="section-title">Stratejiden Reklamlara 12 Modül</h2>
+          <p class="section-description">
+            Sadece “nasıl yapılır” anlatan videolar değil, markanla birlikte
+            uyguladığımız net bir yol haritası. Aşağıda programın ana başlıklarını
+            görebilirsin.
+          </p>
+        </div>
+
+        <div class="program-grid">
+          <article class="program-item">
+            <div class="program-index">1. Stratejik Başlangıç</div>
+            <h3>Doğru iş modeli, doğru pazar</h3>
+            <h4>Dropshipping, D2C veya private label</h4>
+            <p>
+              Sana en uygun modeli birlikte seçiyoruz, kazanç potansiyeli yüksek
+              nişleri ve hedef kitleni netleştiriyoruz.
+            </p>
+          </article>
+
+          <article class="program-item">
+            <div class="program-index">2. Marka &amp; Şirket Kurulumu</div>
+            <h3>Gerçek işe dönüşen yapı</h3>
+            <h4>İsim, domain, şirket, tescil</h4>
+            <p>
+              Marka ismi, şirketleşme, ödeme sistemleri ve temel hukuki altyapı
+              profesyonelce planlanır.
+            </p>
+          </article>
+
+          <article class="program-item">
+            <div class="program-index">3. Shopify Site Kurulumu</div>
+            <h3>Satışa hazır mağaza</h3>
+            <h4>Tema, ürün sayfası, politikalar</h4>
+            <p>
+              Tema seçimi, mağaza ayarları, iade politikaları, uygulama entegrasyonları
+              ve domain bağlantısı uçtan uca kurulur.
+            </p>
+          </article>
+
+          <article class="program-item">
+            <div class="program-index">4. SEO &amp; Ürün Yayınlama</div>
+            <h3>Ürün sayfasını satış makinesine çevir</h3>
+            <h4>SEO uyumlu içerik</h4>
+            <p>
+              Başlıklar, açıklamalar, görseller ve yapılandırılmış veriler Google
+              ve Shopify uyumlu şekilde hazırlanır.
+            </p>
+          </article>
+
+          <article class="program-item">
+            <div class="program-index">5. Sosyal Medya &amp; İçerik</div>
+            <h3>Markanı görünür kıl</h3>
+            <h4>TikTok, Instagram, Reels</h4>
+            <p>
+              Video içerik üretimi, CapCut pratikleri ve sürdürülebilir içerik
+              takvimi kurgulanır.
+            </p>
+          </article>
+
+          <article class="program-item">
+            <div class="program-index">6. Reklam Yönetimi</div>
+            <h3>Reklamla büyümenin formülü</h3>
+            <h4>Meta, TikTok, Google Ads</h4>
+            <p>
+              Kampanya kurulumları, hedefleme, funnel stratejisi ve optimizasyon
+              adımlarını birlikte yönetiyoruz.
+            </p>
+          </article>
+
+          <article class="program-item">
+            <div class="program-index">7. Lojistik &amp; Tedarik</div>
+            <h3>Ürün müşteriye ulaşana kadar</h3>
+            <h4>Dropshipping vs stoklu sistem</h4>
+            <p>
+              Depo çözümleri, yurtiçi/yurtdışı kargo, tedarik zinciri ve maliyet
+              planlaması yapılır.
+            </p>
+          </article>
+
+          <article class="program-item">
+            <div class="program-index">8. Müşteri Deneyimi</div>
+            <h3>Sadakat ve tekrar satış</h3>
+            <h4>CRM &amp; satış sonrası süreç</h4>
+            <p>
+              İade, değişim, müşteri iletişimi ve uzun vadeli ilişki kurmaya
+              yönelik süreçler tasarlanır.
+            </p>
+          </article>
+
+          <article class="program-item">
+            <div class="program-index">9. İçerik Hikayesi &amp; UGC</div>
+            <h3>Markanı anlatan videolar</h3>
+            <h4>Storytelling &amp; kreatif briefl er</h4>
+            <p>
+              UGC kurguları, senaryo başlıkları ve kreatif briefl er ile içerik
+              kalitesi yükseltilir.
+            </p>
+          </article>
+
+          <article class="program-item">
+            <div class="program-index">10. Yapay Zekâ Destekli Pazarlama</div>
+            <h3>AI ile daha hızlı ve akıllı</h3>
+            <h4>ChatGPT, Midjourney, CapCut AI</h4>
+            <p>
+              Metin, görsel ve otomasyon için kullandığımız araçları adım adım
+              gösteriyoruz.
+            </p>
+          </article>
+
+          <article class="program-item">
+            <div class="program-index">11. Ölçümleme &amp; Büyüme</div>
+            <h3>Veri ile yön ver</h3>
+            <h4>Shopify Analytics, GA4</h4>
+            <p>
+              Raporlama, A/B testleri ve kârlı ölçekleme stratejileriyle
+              performansını kalıcı hale getiriyoruz.
+            </p>
+          </article>
+
+          <article class="program-item">
+            <div class="program-index">12. Case Study &amp; Sürekli Destek</div>
+            <h3>Yalnız değilsin</h3>
+            <h4>Gerçek markalar üzerinden</h4>
+            <p>
+              Gerçek case study’ler, danışmanlık sonrası ajans desteği ve
+              outsourcing çözümleriyle süreci yalnız bırakmıyoruz.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO IT'S FOR -->
+    <section id="who">
+      <div class="container">
+        <div class="who-layout">
+          <div>
+            <div class="section-heading">
+              <div class="section-eyebrow">BU PROGRAM KİMİN İÇİN UYGUN?</div>
+              <h2 class="section-title">Uygunluğunu ve hedefini sorgula</h2>
+              <p class="section-description">
+                Program; hızlı zengin olma hayali satan hazır paketlerden
+                değil, gerçekten işini kurmak ve büyütmek isteyenler için
+                tasarlandı.
+              </p>
+            </div>
+
+            <div class="who-columns">
+              <article class="who-card">
+                <h3>Yeni Başlayanlar İçin</h3>
+                <ul>
+                  <li><span>•</span><span>E-ticarete sıfırdan başlamak istiyorsun.</span></li>
+                  <li><span>•</span><span>Nereden ve nasıl başlayacağını bilmiyorsun.</span></li>
+                  <li><span>•</span><span>Deneme-yanılma yerine net bir plana ihtiyacın var.</span></li>
+                </ul>
+              </article>
+
+              <article class="who-card">
+                <h3>İleri Gitmek İsteyenler İçin</h3>
+                <ul>
+                  <li><span>•</span><span>Shopify mağazan var ama satışların yetersiz.</span></li>
+                  <li><span>•</span><span>İçerik–reklam–lojistik arasında sıkıştın.</span></li>
+                  <li><span>•</span><span>Yatırımlarını kâra çevirecek sistem arıyorsun.</span></li>
+                </ul>
+              </article>
+
+              <article class="who-card">
+                <h3>Öğrenerek Büyümek İsteyenler</h3>
+                <ul>
+                  <li><span>•</span><span>Tek başına yol almak seni yordu.</span></li>
+                  <li><span>•</span><span>Süreci anlayarak öğrenmek istiyorsun.</span></li>
+                  <li><span>•</span><span>Gerçek destek ve ölçülebilir sonuç arıyorsun.</span></li>
+                </ul>
+              </article>
+            </div>
+          </div>
+
+          <aside class="who-image-card">
+            <div class="section-eyebrow" style="margin-bottom:0.25rem;">PROGRAM ÖZETİ</div>
+            <h3 style="font-size:1.1rem;letter-spacing:-0.03em;margin-bottom:0.25rem;">
+              “Gerçek başarı hazır paket değildir.”
+            </h3>
+            <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:0.7rem;">
+              Omega Union’da başarı; ezber değil, analiz, plan ve aksiyonla inşa edilir.
+              Sana yol haritası sunarız ama direksiyonda her zaman sen varsın.
+            </p>
+            <img src="https://omegaunion.co/cdn/shop/files/1_e5bfa99e-c80d-43d0-97c7-606430a029f9.png?v=1755086660&width=1500"
+                 alt="Omega Union program görseli">
+            <p class="who-tags">
+              Sosyal medyada gördüğün başarı hikâyeleri sabırla yazılır. Biz gazla
+              değil, sistemle ilerlemeyi savunuyoruz.
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASE STUDY -->
+    <section id="case-study">
+      <div class="container">
+        <div class="case-layout">
+          <div>
+            <div class="section-heading">
+              <div class="section-eyebrow">GERÇEK CASE STUDY</div>
+              <h2 class="section-title">1 Ayda Sıfırdan Milyona</h2>
+              <p class="section-description">
+                Aşağıdaki videoda, Omega Union ekibiyle birlikte sıfırdan yola çıkıp
+                çok kısa sürede milyon barajını geçen bir markanın sürecini A’dan Z’ye
+                şeffaf şekilde görebilirsin.
+              </p>
+            </div>
+
+            <div class="case-metrics">
+              <div class="case-metric">
+                <strong>Şeffaf panel ekranı</strong>
+                <span>Shopify ve reklam panellerini gizlemeden gösteriyoruz. Gerçek rakamlar, gerçek süreç.</span>
+              </div>
+              <div class="case-metric">
+                <strong>Uçtan uca anlatım</strong>
+                <span>İş modeli seçiminden kreatif üretimine kadar tüm kritik adımlar video içinde yer alıyor.</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="case-video">
+              <iframe
+                src="https://www.youtube.com/embed/SaTiYqfqKds"
+                title="Omega Union 1 Ayda Sıfırdan Milyona Case Study"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <p class="case-note">
+              Videoyu izledikten sonra kendi markan için benzer bir yol haritası
+              isteiyorsan aşağıdaki formdan randevu talebi bırakabilirsin.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="container">
+        <div class="faq-grid">
+          <div class="section-heading">
+            <div class="section-eyebrow">SIK SORULAN SORULAR</div>
+            <h2 class="section-title">Aklına takılanları netleştir</h2>
+            <p class="section-description">
+              Program süresi, bütçe, iade garantisi ve teknik yeterlilik gibi konularda
+              en çok gelen soruları aşağıya topladık. Detaylı soruların için randevu
+              görüşmesinde birlikte üzerinden geçebiliriz.
+            </p>
+          </div>
+
+          <div>
+            <details open>
+              <summary>
+                <span>Program ne kadar sürüyor?</span>
+                <span class="faq-icon">＋</span>
+              </summary>
+              <p>
+                Çekirdek program 3 ay sürer. İhtiyaca göre danışmanlık ve destek bu
+                sürenin sonrasında da devam edebilir; hız ve derinliği markanın
+                ihtiyaçlarına göre birlikte belirliyoruz.
+              </p>
+            </details>
+
+            <details>
+              <summary>
+                <span>Gerçekten belirli bir ciroyu garanti ediyor musunuz?</span>
+                <span class="faq-icon">＋</span>
+              </summary>
+              <p>
+                Tüm adımları eksiksiz uygular, belirlenen stratejiye sadık kalırsan
+                100.000&nbsp;₺+ ciroya ulaşma ihtimalin çok yüksektir. Süreç boyunca
+                veriye göre ilerler, çalışmayan noktaları birlikte düzeltiriz.
+              </p>
+            </details>
+
+            <details>
+              <summary>
+                <span>Shopify veya e-ticaret bilmiyorum, yine de katılabilir miyim?</span>
+                <span class="faq-icon">＋</span>
+              </summary>
+              <p>
+                Evet. Program özellikle sıfırdan başlayanlar için tasarlandı.
+                Teknik tarafta yalnız bırakılmıyor, adım adım ilerliyorsun.
+              </p>
+            </details>
+
+            <details>
+              <summary>
+                <span>Reklam bütçesi gerekiyor mu?</span>
+                <span class="faq-icon">＋</span>
+              </summary>
+              <p>
+                Evet. Test sürecinde minimum 500–1000&nbsp;$ arasında bir reklam
+                bütçesi öneriyoruz. Bütçe markanın durumuna göre kontrollü şekilde
+                artırılır.
+              </p>
+            </details>
+
+            <details>
+              <summary>
+                <span>Bu bir eğitim mi yoksa danışmanlık mı?</span>
+                <span class="faq-icon">＋</span>
+              </summary>
+              <p>
+                Hibrit bir yapı. Hem modüllerle öğreniyor hem de gerçek zamanlı
+                danışmanlık alıyorsun. Bunu markan için çalışan küçük bir ekip
+                gibi düşünebilirsin.
+              </p>
+            </details>
+
+            <details>
+              <summary>
+                <span>Sonunda neye sahip olacağım?</span>
+                <span class="faq-icon">＋</span>
+              </summary>
+              <p>
+                Satış alan bir Shopify mağazası, sağlam bir marka altyapısı,
+                içerik ve reklam stratejisi ve ölçeklenebilir bir iş modeli.
+              </p>
+            </details>
+
+            <details>
+              <summary>
+                <span>Gerçekten iade alabilir miyim?</span>
+                <span class="faq-icon">＋</span>
+              </summary>
+              <p>
+                Tüm adımları uygulamana rağmen sonuç alamazsan, program ücretinin
+                iadesi için koşullar sözleşmede net şekilde yer alır. Risk bizim,
+                cesaret senden.
+              </p>
+            </details>
+
+            <p class="faq-note">
+              Buradaki cevaplar genel özet niteliğindedir. Başvuru formundan sonra
+              markanın özel durumu için daha detaylı bir plan çıkarıyoruz.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER / CTA -->
+    <section id="newsletter">
+      <div class="container">
+        <div class="newsletter-card">
+          <div>
+            <h2>Güncel kal, ilk sen öğren</h2>
+            <p>
+              Yeni dönem başvurularını, özel içerikleri ve yayınladığımız yeni
+              case study’leri ilk sen görmek istiyorsan e-posta adresini
+              bırakabilirsin.
+            </p>
+          </div>
+
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Statik versiyon: Burayı kendi form / entegrasyonunla bağlayabilirsin.');">
+            <div class="newsletter-input-row">
+              <input type="email" placeholder="E-posta adresin" required>
+              <button type="submit" class="btn btn-primary">Beni haberdar et</button>
+            </div>
+            <p class="newsletter-hint">
+              Statik GitHub Pages versiyonunda bu form örnek amaçlıdır; kendi
+              back-end veya e-posta aracı entegrasyonunu ekleyebilirsin.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        © 2025 <strong>OMEGA UNION</strong> LIMITED
+      </div>
+      <div class="footer-links">
+        <a href="https://omegaunion.co" target="_blank" rel="noreferrer">Ana siteyi ziyaret et</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script>
+  // Mobile menu toggle
+  const toggleBtn = document.querySelector('.mobile-menu-toggle');
+  const mobileNav = document.querySelector('.mobile-nav');
+
+  if (toggleBtn && mobileNav) {
+    toggleBtn.addEventListener('click', () => {
+      const isOpen = mobileNav.style.display === 'block';
+      mobileNav.style.display = isOpen ? 'none' : 'block';
+    });
+
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.style.display = 'none';
+      });
+    });
+  }
+
+  // Smooth scroll (for older browsers that ignore CSS property)
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href').substring(1);
+      const target = document.getElementById(targetId);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+</body>
+</html>
